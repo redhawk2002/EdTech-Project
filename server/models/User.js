@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    trime: true,
+    trim: true,
   },
   password: {
     type: String,
@@ -33,6 +33,12 @@ const userSchema = new mongoose.Schema({
   image: {
     type: String,
     required: true,
+  },
+  token: {
+    type: String,
+  },
+  resetPasswordExpires: {
+    type: Date,
   },
   courseProgress: [
     {
